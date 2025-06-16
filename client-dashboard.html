@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tableau de bord – My GoodLife</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client – Tableau de bord | My GoodLife</title>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<style>
-    body { font-family: 'Quicksand', sans-serif; }
-</style>
+<style>body { font-family: 'Quicksand', sans-serif; }</style>
 </head>
-<body class="bg-gray-100 min-h-screen flex">
+<body class="bg-gray-100 min-h-screen flex flex-col">
 
-<!-- Sidebar -->
-<aside class="w-64 bg-green-600 text-white flex flex-col p-6 space-y-4">
-    <h2 class="text-2xl font-bold mb-6">🥗 My GoodLife</h2>
-    <a href="#" class="hover:underline">Profil</a>
-    <a href="#" class="hover:underline">Repas du jour</a>
-    <a href="#" class="hover:underline">Planning</a>
-    <a href="#" class="hover:underline">Historique poids</a>
-    <a href="login.html" class="mt-auto bg-white text-green-600 px-4 py-2 rounded hover:bg-green-100">Déconnexion</a>
-</aside>
+<!-- Menu global -->
+<header class="bg-green-500 text-white p-5 shadow-md">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+    <h1 class="text-2xl font-bold mb-2 md:mb-0">🥗 My GoodLife</h1>
+    <nav class="flex flex-wrap gap-4">
+        <a href="index.html" class="hover:underline">Accueil</a>
+        <a href="client-dashboard.html" class="bg-white text-green-600 font-semibold px-4 py-2 rounded-full hover:bg-green-100 transition">Espace Client</a>
+        <a href="nutritionist-dashboard.html" class="hover:underline">Espace Nutritionniste</a>
+        <a href="add-meal.html" class="hover:underline">Créer un repas</a>
+        <a href="planning.html" class="hover:underline">Planning</a>
+        <a href="login.html" class="hover:underline">Connexion</a>
+        <a href="register.html" class="hover:underline">Inscription</a>
+    </nav>
+    </div>
+</header>
 
-<!-- Main content -->
-<main class="flex-grow p-8 space-y-10">
-
+<!-- Contenu principal -->
+<main class="flex-grow p-6 space-y-10">
     <!-- Titre -->
     <header class="text-3xl font-bold text-green-700">Bienvenue, <span class="text-gray-800">Client</span> !</header>
 
-    <!-- Section Profil -->
+    <!-- Profil utilisateur -->
     <section class="bg-white p-6 rounded shadow">
     <h3 class="text-xl font-semibold text-green-600 mb-4">Mes informations</h3>
     <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -41,41 +44,39 @@
     </form>
     </section>
 
-    <!-- Section Repas du jour -->
+    <!-- Repas du jour -->
     <section class="bg-white p-6 rounded shadow">
     <h3 class="text-xl font-semibold text-green-600 mb-4">Mes repas du jour 🍽️</h3>
-    <p class="text-gray-700">Aujourd’hui (13 juin 2025) :</p>
-    <ul class="list-disc pl-5 mt-2 text-gray-800">
+    <ul class="list-disc pl-5 text-gray-800">
         <li>Petit-déjeuner : Yaourt + Flocons d’avoine + Fruits</li>
         <li>Déjeuner : Poulet grillé + Quinoa + Brocolis vapeur</li>
         <li>Dîner : Soupe de lentilles + Pain complet + Fruit</li>
     </ul>
     </section>
 
-    <!-- Section Planning -->
+    <!-- Planning hebdo -->
     <section class="bg-white p-6 rounded shadow">
     <h3 class="text-xl font-semibold text-green-600 mb-4">Mon planning</h3>
-    <input type="date" class="border p-2 rounded mb-4" />
-    <table class="w-full text-left">
-        <thead>
-        <tr class="text-green-700 border-b">
-            <th class="py-2">Jour</th>
-            <th class="py-2">Type de repas</th>
-            <th class="py-2">Contenu</th>
+    <input type="date" class="border p-2 rounded mb-4">
+    <table class="w-full border text-left">
+        <thead class="bg-green-100 text-green-800">
+        <tr>
+            <th class="p-2">Jour</th>
+            <th class="p-2">Type</th>
+            <th class="p-2">Repas</th>
         </tr>
         </thead>
         <tbody>
-        <tr class="border-b">
-            <td class="py-2">Lundi</td>
-            <td>Déjeuner</td>
-            <td>Poisson + Riz complet + Haricots verts</td>
+        <tr class="border-t">
+            <td class="p-2">Lundi</td>
+            <td class="p-2">Déjeuner</td>
+            <td class="p-2">Riz complet + Saumon + Haricots verts</td>
         </tr>
-        <!-- Tu peux ajouter d'autres lignes dynamiquement -->
         </tbody>
     </table>
     </section>
 
-    <!-- Section Historique poids -->
+    <!-- Historique poids -->
     <section class="bg-white p-6 rounded shadow">
     <h3 class="text-xl font-semibold text-green-600 mb-4">Historique de poids</h3>
     <ul class="space-y-1 text-gray-700">
@@ -84,8 +85,12 @@
         <li>13/06/2025 – 68.5 kg</li>
     </ul>
     </section>
-
 </main>
+
+<!-- Footer -->
+<footer class="bg-green-100 text-center text-gray-600 py-4 text-sm">
+    © 2025 My GoodLife – Tableau de bord client.
+</footer>
 
 </body>
 </html>

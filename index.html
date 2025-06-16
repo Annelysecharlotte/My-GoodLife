@@ -14,12 +14,17 @@
 </head>
 <body class="bg-gray-50 min-h-screen flex flex-col">
 
-<!-- Header -->
+<!-- Menu de navigation global -->
 <header class="bg-green-500 text-white p-5 shadow-md">
-    <div class="container mx-auto flex justify-between items-center">
-    <h1 class="text-2xl font-bold">🥗 My GoodLife</h1>
-    <nav>
-        <a href="login.html" class="text-white hover:underline mx-3">Connexion</a>
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+    <h1 class="text-2xl font-bold mb-2 md:mb-0">🥗 My GoodLife</h1>
+    <nav class="flex flex-wrap gap-4">
+        <a href="index.html" class="hover:underline">Accueil</a>
+        <a href="client-dashboard.html" class="hover:underline">Espace Client</a>
+        <a href="nutritionist-dashboard.html" class="hover:underline">Espace Nutritionniste</a>
+        <a href="add-meal.html" class="hover:underline">Créer un repas</a>
+        <a href="planning.html" class="hover:underline">Planning</a>
+        <a href="login.html" class="hover:underline">Connexion</a>
         <a href="register.html" class="bg-white text-green-600 font-semibold px-4 py-2 rounded-full hover:bg-green-100 transition">Inscription</a>
     </nav>
     </div>
@@ -47,3 +52,4 @@
 
 </body>
 </html>
+
